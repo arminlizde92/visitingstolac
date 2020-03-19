@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitingStolac.API", "VisitingStolac.API\VisitingStolac.API.csproj", "{4353C90C-7959-4C96-90E4-BBBDD3550E35}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitingStolac.Common", "VisitingStolac.Common\VisitingStolac.Common.csproj", "{73C6589F-5F1C-40F9-A5F5-F93F422232C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitingStolac.DAL", "VisitingStolac.DAL\VisitingStolac.DAL.csproj", "{34D82D62-621F-43F6-8515-D2CF39911A2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitingStolac.BLL.Abstractions", "VisitingStolac.BLL.Abstractions\VisitingStolac.BLL.Abstractions.csproj", "{2269EBEB-AFE8-4EDC-927C-24A05122A023}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitingStolac.BLL.EF", "VisitingStolac.BLL.EF\VisitingStolac.BLL.EF.csproj", "{CE617683-DFF0-4C2E-811E-3AB8AE9CCB13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitingStolac.Web", "VisitingStolac.Web\VisitingStolac.Web.csproj", "{3FFAB5EF-7274-4957-ACE6-11CB3D404C8E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitingStolac.BLL.Mock", "VisitingStolac.BLL.Mock\VisitingStolac.BLL.Mock.csproj", "{3A5913CC-03AD-480E-B077-50E5A4072CBA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitingStolac.DAL.Migrations", "VisitingStolac.DAL.Migrations\VisitingStolac.DAL.Migrations.csproj", "{F70A195A-2183-4E35-A0BB-F94EDF041456}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitingStolac.Common.Tests", "VisitingStolac.Common.Tests\VisitingStolac.Common.Tests.csproj", "{8B4A9999-1BB2-4ADB-B650-C7B8257C1B66}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitingStolac.DAL.Test", "VisitingStolac.DAL.Test\VisitingStolac.DAL.Test.csproj", "{30574438-B833-4977-A263-F847ECFE9426}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitingStolac.BLL.EF.Test", "VisitingStolac.BLL.EF.Test\VisitingStolac.BLL.EF.Test.csproj", "{810D9DAF-6EF3-470B-83FB-EC78E840A8E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4353C90C-7959-4C96-90E4-BBBDD3550E35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4353C90C-7959-4C96-90E4-BBBDD3550E35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4353C90C-7959-4C96-90E4-BBBDD3550E35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4353C90C-7959-4C96-90E4-BBBDD3550E35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C6589F-5F1C-40F9-A5F5-F93F422232C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C6589F-5F1C-40F9-A5F5-F93F422232C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C6589F-5F1C-40F9-A5F5-F93F422232C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C6589F-5F1C-40F9-A5F5-F93F422232C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34D82D62-621F-43F6-8515-D2CF39911A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34D82D62-621F-43F6-8515-D2CF39911A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34D82D62-621F-43F6-8515-D2CF39911A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34D82D62-621F-43F6-8515-D2CF39911A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2269EBEB-AFE8-4EDC-927C-24A05122A023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2269EBEB-AFE8-4EDC-927C-24A05122A023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2269EBEB-AFE8-4EDC-927C-24A05122A023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2269EBEB-AFE8-4EDC-927C-24A05122A023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE617683-DFF0-4C2E-811E-3AB8AE9CCB13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE617683-DFF0-4C2E-811E-3AB8AE9CCB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE617683-DFF0-4C2E-811E-3AB8AE9CCB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE617683-DFF0-4C2E-811E-3AB8AE9CCB13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FFAB5EF-7274-4957-ACE6-11CB3D404C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FFAB5EF-7274-4957-ACE6-11CB3D404C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FFAB5EF-7274-4957-ACE6-11CB3D404C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FFAB5EF-7274-4957-ACE6-11CB3D404C8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A5913CC-03AD-480E-B077-50E5A4072CBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A5913CC-03AD-480E-B077-50E5A4072CBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A5913CC-03AD-480E-B077-50E5A4072CBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A5913CC-03AD-480E-B077-50E5A4072CBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F70A195A-2183-4E35-A0BB-F94EDF041456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F70A195A-2183-4E35-A0BB-F94EDF041456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F70A195A-2183-4E35-A0BB-F94EDF041456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F70A195A-2183-4E35-A0BB-F94EDF041456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B4A9999-1BB2-4ADB-B650-C7B8257C1B66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B4A9999-1BB2-4ADB-B650-C7B8257C1B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B4A9999-1BB2-4ADB-B650-C7B8257C1B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B4A9999-1BB2-4ADB-B650-C7B8257C1B66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30574438-B833-4977-A263-F847ECFE9426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30574438-B833-4977-A263-F847ECFE9426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30574438-B833-4977-A263-F847ECFE9426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30574438-B833-4977-A263-F847ECFE9426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{810D9DAF-6EF3-470B-83FB-EC78E840A8E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{810D9DAF-6EF3-470B-83FB-EC78E840A8E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{810D9DAF-6EF3-470B-83FB-EC78E840A8E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{810D9DAF-6EF3-470B-83FB-EC78E840A8E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49F23A73-A579-46E1-BE46-B01430A8D52A}
+	EndGlobalSection
+EndGlobal

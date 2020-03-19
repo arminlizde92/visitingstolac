@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VisitingStolac.BLL.Abstractions\VisitingStolac.BLL.Abstractions.csproj" />
+    <ProjectReference Include="..\VisitingStolac.DAL\VisitingStolac.DAL.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <title>@ViewData["Title"] - VisitStolacFront</title>
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- CSS Files -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    @*<link href="./css/demo.css" rel="stylesheet" />*@
+
+    <style>
+        .video-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+            .video-container video {
+                /* Make video to at least 100% wide and tall */
+                min-width: 100%;
+                min-height: 100%;
+                /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+                width: auto;
+                height: auto;
+                /* Center the video */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        #marker-map-item {
+            animation: .8s infinite beatHeart;
+        }
+        @@keyframes beatHeart {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(2);
+            }
+
+            40% {
+                transform: scale(1);
+            }
+
+            60% {
+                transform: scale(2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="/Home" rel="tooltip" title="Designed by Invision. Coded by Creative Tim" data-placement="bottom">
+                    VisitStolac
+                </a>
+                <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar top-bar"></span>
+                    <span class="navbar-toggler-bar middle-bar"></span>
+                    <span class="navbar-toggler-bar bottom-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="./img/blurred-image-1.jpg">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
+                            <i class="fas fa-search"></i>
+                            <p>Explore</p>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
+                            <a class="dropdown-item" href="./index.html">
+                                <i class="now-ui-icons business_chart-pie-36"></i> Stolac as an adventure
+                            </a>
+                            <a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
+                                <i class="now-ui-icons design_bullet-list-67"></i> Gastronomy
+                            </a>
+                            <a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
+                                <i class="now-ui-icons design_bullet-list-67"></i> Stolac and Surroundings
+                            </a>
+                            <a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
+                                <i class="now-ui-icons design_bullet-list-67"></i> History of Stolac
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
+                            <i class="fas fa-rocket"></i>
+                            <p>Plan a trip</p>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
+                            <a class="dropdown-item" href="./index.html">
+                                <i class="now-ui-icons business_chart-pie-36"></i> How to get to Stolac
+                            </a>
+                            <a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
+                                <i class="now-ui-icons design_bullet-list-67"></i> Userful numbers
+                            </a>
+                            <a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
+                                <i class="now-ui-icons design_bullet-list-67"></i> Stay safe
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
+                            <p>Language</p>
+                            <span class="fas fa-language" style="font-size:16px"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
+                            <a class="dropdown-item" href="./index.html">
+                                <i class="now-ui-icons business_chart-pie-36"></i> How to get to Stolac
+                            </a>
+                            <a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
+                                <i class="now-ui-icons design_bullet-list-67"></i> Userful numbers
+                            </a>
+                            <a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
+                                <i class="now-ui-icons design_bullet-list-67"></i> Stay safe
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item" id="marker-map-item">
+                        <a class="nav-link" href="/Home/Route">
+                            <span class="fas fa-map-marker-alt" style="font-size:16px"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="fas fa-bed" style="font-size:16px"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                            <p class="d-lg-none d-xl-none">Twitter</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
+                            <i class="fab fa-facebook-square"></i>
+                            <p class="d-lg-none d-xl-none">Facebook</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <p class="d-lg-none d-xl-none">Instagram</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+    
+        @RenderBody()
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                        </button>
+                        <h4 class="title title-up">Modal title</h4>
+                    </div>
+                    <div class="modal-body" id="myModalBody">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="btn-nice" class="btn btn-default">Nice Button</button>
+                        <button type="button" id="btn-close" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <partial name="../LayoutPartials/_Footer.cshtml" />
+    <script src="~/js/jquery.min.js" type="text/javascript"></script>
+    <script src="~/js/popper.min.js" type="text/javascript"></script>
+    <script src="~/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/js/bootstrap-switch.js"></script>
+    <script src="~/js/nouislider.min.js"></script>
+    <script src="~/js/now-ui-kit.js?v=1.3.0" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            // the body of this function is in assets/js/now-ui-kit.js
+            nowuiKit.initSliders();
+        });
+
+        function scrollToDownload() {
+
+            if ($('.section-download').length != 0) {
+                $("html, body").animate({
+                    scrollTop: $('.section-download').offset().top
+                }, 1000);
+            }
+        }
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

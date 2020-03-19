@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="NLog" Version="4.6.8" />
+    <PackageReference Include="NLog.Config" Version="4.6.8" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VisitingStolac.BLL.Abstractions\VisitingStolac.BLL.Abstractions.csproj" />
+    <ProjectReference Include="..\VisitingStolac.BLL.EF\VisitingStolac.BLL.EF.csproj" />
+    <ProjectReference Include="..\VisitingStolac.BLL.Mock\VisitingStolac.BLL.Mock.csproj" />
+    <ProjectReference Include="..\VisitingStolac.Common\VisitingStolac.Common.csproj" />
+    <ProjectReference Include="..\VisitingStolac.DAL\VisitingStolac.DAL.csproj" />
+  </ItemGroup>
+
+</Project>

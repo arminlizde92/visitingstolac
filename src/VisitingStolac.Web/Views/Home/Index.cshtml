@@ -1,0 +1,432 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model HomeIndexVM
+<style>
+    .wrapper .image {
+        height: 400px;
+        margin: 10px;
+        position: relative;
+    }
+
+        .wrapper .image img {
+            height: 100%;
+        }
+
+        .wrapper .image .overlay {
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+
+            .wrapper .image .overlay .icon {
+                cursor: pointer;
+                font-size: 32px;
+                height: 50px;
+                line-height: 50px;
+                margin: 20px;
+                opacity: 0.7;
+                text-align: center;
+                transition: 0.3s ease;
+                width: 50px;
+            }
+
+                .wrapper .image .overlay .icon:hover {
+                    opacity: 1;
+                }
+
+    @@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+    *, *:before, *:after {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+
+
+    @@media screen and (max-width: 640px) {
+        .container-image {
+            display: block;
+            width: 100%;
+        }
+    }
+
+
+
+    .content {
+        position: relative;
+        width: 90%;
+        max-width: 400px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+        .content .content-overlay {
+            background: rgba(0,0,0,0.7);
+            position: absolute;
+            height: 99%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+
+        .content:hover .content-overlay {
+            opacity: 1;
+        }
+
+    .content-image {
+        width: 100%;
+    }
+
+    .content-details {
+        position: absolute;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    .content:hover .content-details {
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+    }
+
+    .content-details h3 {
+        color: #fff;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+    }
+
+    .content-details p {
+        color: #fff;
+        font-size: 0.8em;
+    }
+
+    .fadeIn-bottom {
+        top: 80%;
+    }
+
+    .fadeIn-top {
+        top: 20%;
+    }
+
+    .fadeIn-left {
+        left: 20%;
+    }
+
+    .fadeIn-right {
+        left: 80%;
+    }
+</style>
+<div class="video-container">
+    <video autoplay muted loop width="1280" height="720" id="myVideo">
+        <source src="video/stolac_Trim.mp4" type="video/mp4">
+    </video>
+</div>
+<div class="page-header clear-filter" filter-color="orange">
+    @*<div class="page-header-image" data-parallax="true" style="background-image:url('./img/header.jpg');">
+        </div>*@
+    <div class="container">
+        @*<div class="content-center brand">
+                <img class="n-logo" src="./img/now-logo.png" alt="">
+                <h1 class="h1-seo">Now UI Kit.</h1>
+                <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
+            </div>*@
+        @*<h6 class="category category-absolute">
+                Designed by
+                <a href="http://invisionapp.com/" target="_blank">
+                    <img src="./img/invision-white-slim.png" class="invision-logo" />
+                </a>. Coded by
+                <a href="https://www.creative-tim.com" target="_blank">
+                    <img src="./img/creative-tim-white-slim2.png" class="creative-tim-logo" />
+                </a>.
+            </h6>*@
+    </div>
+</div>
+<div class="main">
+    <div class="section section-basic" id="basic-elements">
+        <div class="container">
+            <div class="team">
+                <div class="row">
+                    <div class="col-md-4 offset-4">
+                        <div class="team-player">
+                            <img src="~/img/ivocaca.jpg"
+                                 alt="Thumbnail Image"
+                                 class="rounded-circle img-fluid img-raised" />
+                            <h4 class="title">Ivo Andrić</h4>
+                            <p class="category text-primary">Writer</p>
+                            <p class="writer-text">
+                                "Ako je Bog želio igdje stvoriti Svijet onda ga je stvorio u Stocu."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto text-center">
+                    <h2 class="title">Green pearl</h2>
+                    <h5 class="description">
+                        Beautiful place with beautiful people. Pay a visit to this small but rich oasis
+                        and enjoy your stay. Take a look at some of many places you can visit.
+                    </h5>
+                </div>
+            </div>
+            <div class="separator separator-primary"></div>
+            <div class="section-story-overview">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="image-container image-left"
+                             style="background-image: url('./img/provalije.jpg')">
+                            <!-- First image on the left side -->
+                            <p class="blockquote blockquote-primary">
+                                "Feel the energy"
+                            </p>
+                        </div>
+                        <!-- Second image on the left side of the article -->
+                        <!-- <div
+                          class="image-container"
+                          style="background-image: url('img/stolac2.jpg')"
+                        ></div> -->
+                    </div>
+                    <div class="col-md-5">
+                        <!-- First image on the right side, above the article -->
+                        <div class="image-container image-right"
+                             style="background-image: url('./img/stolac3.jpg')"></div>
+                        <h3>
+                            So you wanna discover something new ?
+                        </h3>
+                        <p>
+                            If discovering archaeological and anthropological sites with significant historical layers is your thing,
+                            and if you are looking for a truly authentic destination,
+                            you are on the right page. In southern Bosnia & Herzegovina, very close to the Adriatic coast,
+                            a charming gem called Stolac busts in ancient cultural heritage and ecological diversity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto text-center">
+                    <h2 class="title">Remnants of history</h2>
+                    <h5 class="description">
+                        Rich historical background is one of plenty things we have to offer
+                    </h5>
+                </div>
+            </div>
+            <div class="separator separator-primary"></div>
+            <div class="col-md-12 ml-auto mr-auto">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="~/img/begovina.jpg" />
+                    </div>
+                    <div class="col-6">
+                        <img src="~/img/tekija.jpg" />
+                    </div>
+                    <div class="col-6">
+                        <img src="~/img/daorson1.jpg" />
+                    </div>
+                    <div class="col-6">
+                        <img src="~/img/radimlja.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 ml-auto mr-auto mb-4">
+                    <h3 class="title text-center">Experience the spirit of Stolac</h3>
+                    <div class="nav-align-center">
+                        <ul class="nav nav-pills nav-pills-primary nav-pills-just-icons" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#profile" role="tablist">
+                                    <i class="now-ui-icons design_image"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#home" role="tablist">
+                                    <i class="now-ui-icons location_world"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#messages" role="tablist">
+                                    <i class="now-ui-icons sport_user-run"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Tab panes -->
+                <div class="tab-content gallery">
+                    <div class="tab-pane active" id="home" role="tabpanel">
+                        <div class="col-md-10 ml-auto mr-auto">
+                            <div class="row collections">
+                                <div class="col-md-6 mt-1">
+                                    <img src="~/img/begovina.jpg" alt="" class="img-raised mb-1">
+                                    <img src="~/img/daorson1.jpg" alt="" class="img-raised">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="~/img/begovina.jpg" alt="" class="img-raised mb-1">
+                                    <img src="~/img/daorson1.jpg" alt="" class="img-raised">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="profile" role="tabpanel">
+                        <div class="col-md-10 ml-auto mr-auto">
+                            <div class="row collections">
+                                <div class="col-md-6">
+                                    <img src="~/img/stolac3.jpg" class="img-raised">
+                                    <img src="~/img/radimlja.jpg" alt="" class="img-raised">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="~/img/stolac3.jpg" class="img-raised">
+                                    <img src="~/img/radimlja.jpg" alt="" class="img-raised">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="messages" role="tabpanel">
+                        <div class="col-md-10 ml-auto mr-auto">
+                            <div class="row collections">
+                                <div class="col-md-6">
+                                    <img src="~/img/tekija.jpg" alt="" class="img-raised mb-1">
+                                    <img src="~/img/stolac1.jpg" alt="" class="img-raised">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="~/img/tekija.jpg" alt="" class="img-raised mb-1">
+                                    <img src="~/img/stolac1.jpg" alt="" class="img-raised">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto text-center">
+                    <h2 class="title">Latest posts</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class='container'>
+                    <div class="row">
+                        @foreach (var post in Model.posts)
+                        {
+                        <div class="col-4">
+                            <div class="container-image">
+                                <div class="content">
+                                    <a href="/Post/@post.Id" target="">
+                                        <div class="content-overlay"></div>
+                                        <img class="content-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+                                        <div class="content-details fadeIn-bottom">
+                                            <h3 class="content-title">@post.Title</h3>
+                                            <p class="content-text">@post.Text</p>
+                                            <span class="text-sm-center">@post.Created.ToShortDateString()</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-contact-us text-center">
+        <div class="container">
+            <h2 class="title">Want to work with us?</h2>
+            <p class="description">Your project is very important to us.</p>
+            <div class="row">
+                <div class="col-lg-6 text-center ml-auto mr-auto col-md-8">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Email" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-round btn-lg">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+
+    <script>
+
+        const nodes = [].slice.call(document.querySelectorAll('li'), 0);
+        const directions = { 0: 'top', 1: 'right', 2: 'bottom', 3: 'left' };
+        const classNames = ['in', 'out'].map((p) => Object.values(directions).map((d) => `${p}-${d}`)).reduce((a, b) => a.concat(b));
+
+        const getDirectionKey = (ev, node) => {
+            const { width, height, top, left } = node.getBoundingClientRect();
+            const l = ev.pageX - (left + window.pageXOffset);
+            const t = ev.pageY - (top + window.pageYOffset);
+            const x = (l - (width / 2) * (width > height ? (height / width) : 1));
+            const y = (t - (height / 2) * (height > width ? (width / height) : 1));
+            return Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
+        }
+
+        class Item {
+            constructor(element) {
+                this.element = element;
+                this.element.addEventListener('mouseover', (ev) => this.update(ev, 'in'));
+                this.element.addEventListener('mouseout', (ev) => this.update(ev, 'out'));
+            }
+
+            update(ev, prefix) {
+                this.element.classList.remove(...classNames);
+                this.element.classList.add(`${prefix}-${directions[getDirectionKey(ev, this.element)]}`);
+            }
+        }
+
+        nodes.forEach(node => new Item(node));
+        $(window).on("load", function () {
+            $(".modal-header").empty();
+            $("#btn-nice").hide();
+            $("#btn-close").hide();
+            $('#myModalBody').append("<a href='/Home/Route'><img src='./img/map-marker.png' style='width:80px;'></a><span>Check how to find our town by clicking the marker</span>");
+            $("#myModal").modal("show");
+        });
+
+    </script>
+
+}
